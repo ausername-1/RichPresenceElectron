@@ -46,13 +46,13 @@ function createSystemTray() {
   var contextMenu = Menu.buildFromTemplate([
     {
       label: `${crown} Rich Presence Electron`,
-      click: function() {
+    click: function({[
         shell.openPath('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
         }
     },
       {
       label: 'Star us on Github!',
-      click: function() {
+      click: function() 
          shell.openPath('https://github.com/DiscordAddons/RichPresenceElectron')
       }
     },
