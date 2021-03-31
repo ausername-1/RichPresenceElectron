@@ -12,3 +12,5 @@ There are some ground rules to contribute to **Rich Presence Electron**:
 - Ensure that everything works in the production & development build
 - Ensure that your code supports cross platform functionality
 - If you are looking to make big changes to the code please discuss this with the owner.
+
+#### Thank you once again!
