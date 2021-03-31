@@ -9,3 +9,6 @@
 You can Install the .exe and run the setup file after doing so you launch the exe file and put your Client ID in and fill the blanks and click on  Start RPC
 ### What if I am not using Windows
 You can download **Rich Presence Electron** source code and either compile the source code using the electron-build package by running the command "electron-build --linux" or "electron build --mac" or you can run the development build by running npm start
+
+### Want to contribute?
+If you are interested in contributing to the source code please read **CONTRIBUTING.MD** as a guide to get started contributed to **Rich Presence Electron** Thank you for contributing you are incredible! 👑
