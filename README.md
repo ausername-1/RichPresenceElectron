@@ -1,5 +1,5 @@
 [![RichPresenceElectron](https://raw.githubusercontent.com/tarajohns0n/RichPresenceElectron/main/icons/crownonly.png "RichPresenceElectron")](https://raw.githubusercontent.com/tarajohns0n/RichPresenceElectron/main/icons/crownonly.png "RichPresenceElectron")
-####  **Rich** Presence Electron
+###  **Rich** Presence Electron
 [![Build](https://github.com/tarajohns0n/RichPresenceElectron/actions/workflows/test.yml/badge.svg)](https://github.com/tarajohns0n/RichPresenceElectron/actions/workflows/test.yml)
 
 ### What is Rich Presence Electron?
