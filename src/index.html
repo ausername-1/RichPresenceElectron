@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rich Presence Electron</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script defer src="render.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Rich Presence Electron</h1>
+      <form id="makerpc">
+        <div class="field">
+          <label class="label">Client ID</label>
+          <div class="control">
+            <input class="input" required="true" id="clientid" placeholder="e.g 826442326737682472">
+          </div>
+        </div>
+      
+        <div class="field">
+          <label class="label">Large Image</label>
+          <div class="control">
+            <input class="input" id="largeimage" placeholder="Large Image">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Small Image</label>
+          <div class="control">
+            <input class="input" id="smallimage" placeholder="Small Image">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">State</label>
+          <div class="control">
+            <input class="input" id="state" placeholder="State">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Details</label>
+          <div class="control">
+            <input class="input" id="details" placeholder="Details">
+          </div>
+        </div>
+        <button type="submit" id="submit" class="button is-primary">Start RPC</button>
+      </form>
+    </div>
+    <script>
+      const form = document.getElementById('makerpc')
+form.addEventListener('submit', startrpc)
+
+
+ async function startrpc(event) {
+    event.preventDefault();
+    const clientid = document.getElementById('clientid').value;
+    const largeimage = document.getElementById('largeimage').value;
+    const smallimage = document.getElementById('smallimage').value;
+    const state = document.getElementById('state').value;
+    const details = document.getElementById('details').value;
+
+          const result = await fetch('http://localhost:3000/api/makerpc', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                clientid,
+                largeimage,
+                smallimage,
+                state,
+                details
+             })
+         }).then((res) => res.json())
+         console.log(result)
+         if(result.status === "ok") {
+            
+            } else {
+             alert(result.error)
+         }
+      }
+    </script>
+  </body>
+</html>
